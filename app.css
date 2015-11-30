@@ -81,6 +81,41 @@ body {
 .mdl-card--expand {
 	background: #46B6AC;
 }
+
+/*Upload button*/
+.inputfile-6--label {
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	color: inherit;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	line-height: normal;
+	height: 29px;
+	font-size: 7px;
+}
+
+.download {
+	-webkit-align-self: flex-end;
+	-ms-flex-item-align: end;
+	align-self: flex-end;
+	color: inherit;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 29px;
+	margin-left: 15px;
+	padding: 0px 16px;
+	line-height: 32px;
+	color: #fff;
+}
+
+.mdl-data-table {
+	margin: 0 auto;
+	width: 95%;
+}
+
 /*
 .word[data-word-type=JJ]:after {
 display: none;

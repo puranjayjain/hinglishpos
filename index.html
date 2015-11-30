@@ -3,13 +3,36 @@
 <head>
   <link rel="stylesheet" href="material.min.css">
   <script src="material.min.js"></script>
+  <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"> -->
+  <meta name="author" content="Puranjay Jain, Rishiraj Biswas, Amol Goel, Arpit Dadu" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.min.css" />
   <link rel="stylesheet" href="app.min.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- remove this if you use Modernizr -->
+  <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
 </head>
 <body>
   <div class="demo-card-square mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title mdl-card--expand">
       <h2 class="mdl-card__title-text">Hinglish Word Tagger</h2>
+      <input type="file" name="file-7" id="file-7" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple="" style="visibility: hidden;">
+      <label class="inputfile-6--label" for="file-7"><span></span>
+        <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+          Upload Data
+        </strong>
+      </label>
+      <!-- Raised button with ripple -->
+      <a id=download download="output.dat" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect download">
+        Download
+      </a>
+      <!-- onclick="testthedata()" -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect download testdata">
+        Test
+      </button>
     </div>
     <div class="mdl-card__supporting-text">
       <form action="#">
@@ -17,9 +40,28 @@
           <input class="mdl-textfield__input" type="text" id="tagtext" onkeypress="tagemall()">
           <label class="mdl-textfield__label" for="tagtext">Enter your sentence to tag</label>
         </div>
+        <h5 id="testresult"></h5>
       </form>
     </div>
   </div>
+  <table id="datatable" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric">Tag</th>
+        <th class="mdl-data-table__cell--non-numeric">Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr>
+        <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+        <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+      </tr>
+      <tr>
+        <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+        <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+      </tr> -->
+    </tbody>
+  </table>
   <div class="demo-card-square mdl-card mdl-shadow--2dp">
     <div class="mdl-card__title mdl-card--expand">
       <h2 class="mdl-card__title-text">About Us</h2>
@@ -38,6 +80,7 @@
   <script src="pos/lexicon.min.js"></script>
   <script src="pos/types.min.js"></script>
   <script src="pos/lexer.min.js"></script>
+  <script src="js/custom-file-input.min.js"></script>
   <script src="app.min.js"></script>
 </body>
 </html>

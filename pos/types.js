@@ -14,6 +14,7 @@ var wordTypes = {
 	"NN": "Noun, sing. or mass",
 	"N_NN":"Noun, sing. or mass",
 	"NNP": "Proper noun, sing.",
+	"N_NST": "Spatio-temporal",
 	"N_NNP": "Proper noun, sing.",
 	"NNPS": "Proper noun, plural",
 	"NNS": "Noun, plural",

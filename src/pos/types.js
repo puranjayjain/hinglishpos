@@ -70,6 +70,5 @@ var wordTypes = {
 	"#": "Pound sign",
 	"\"": "quote",
 	"(": "Left paren",
-	")": "Right paren",
-	
+	")": "Right paren"
 };

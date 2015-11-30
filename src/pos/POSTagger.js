@@ -95,7 +95,24 @@ POSTagger.prototype.tag = function(words){
     // rule 8: convert a common noun to a present participle verb (i.e., a gerund)
     if (startsWith(ret[i], "NN") && endsWith(words[i], "ing"))
     ret[i] = "VBG";
+
+    // rule 9: convert any type to verb gerund if it ends in "unga";
+    if (endsWith(words[i], "unga"))
+    ret[i] = "VBG";
+
+    // rule 10: convert any type to verb gerund if it ends in "enga";
+    if (endsWith(words[i], "enge"))
+    ret[i] = "VBG";
+
+    // rule 11: convert any type to verb gerund if it ends in "ega";
+    if (endsWith(words[i], "ega"))
+    ret[i] = "VBG";
+
+    // rule 12: convert any type to verb past if it ends in "gaya";
+    if (endsWith(words[i], "gaya"))
+    ret[i] = "VBN";
   }
+
   var result = new Array();
   for (i in words) {
     result[i] = [words[i], ret[i]];
@@ -109,4 +126,5 @@ POSTagger.prototype.prettyPrint = function(taggedWords) {
   }
 }
 
-//print(new POSTagger().tag(["i", "went", "to", "the", "store", "to", "buy", "5.2", "gallons", "of", "milk"]));
+//Usage Example
+//console.log(new POSTagger().tag(["i", "went", "to", "the", "store", "to", "buy", "5.2", "gallons", "of", "milk"]));

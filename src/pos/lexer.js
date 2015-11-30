@@ -1,3 +1,4 @@
+//regular expression strings
 var re = {
   // code referred from http://daringfireball.net/2010/07/improved_regex_for_matching_urls for matching
   url: /\b(?:(?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))*\))+(?:\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig,
@@ -74,5 +75,5 @@ function LexerNode(string, regex, regexs){
 
   /*usage example :
   var lexer = new Lexer();
-  print(lexer.lex("I made $5.60 today in 1 hour of work.  The E.M.T.'s were on time, but only barely.").toString());
+  console.log(lexer.lex("Dabbay wala dabba le ke aa ja.").toString());
   */

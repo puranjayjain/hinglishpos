@@ -95,7 +95,24 @@ POSTagger.prototype.tag = function(words){
     // rule 8: convert a common noun to a present participle verb (i.e., a gerund)
     if (startsWith(ret[i], "NN") && endsWith(words[i], "ing"))
     ret[i] = "VBG";
+
+    // rule 9: convert any type to verb gerund if it ends in "unga";
+    if (endsWith(words[i], "unga"))
+    ret[i] = "VBG";
+
+    // rule 9: convert any type to verb gerund if it ends in "unga";
+    if (endsWith(words[i], "enge"))
+    ret[i] = "VBG";
+
+    // rule 9: convert any type to verb gerund if it ends in "unga";
+    if (endsWith(words[i], "ega"))
+    ret[i] = "VBG";
+
+    if (endsWith(words[i], "gaya"))
+    ret[i] = "VBN";
   }
+
+
   var result = new Array();
   for (i in words) {
     result[i] = [words[i], ret[i]];

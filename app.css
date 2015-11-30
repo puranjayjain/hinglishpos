@@ -27,6 +27,18 @@ body {
 	font-style: italic;
 }
 
+.word[data-word-type^=V_VM] {
+	color: #00E676;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.word[data-word-type^=V_VAUX] {
+	color: #00C853;
+	font-weight: bold;
+	font-style: italic;
+}
+
 /* nouns */
 .word[data-word-type^=N] {
 	color: blue;
@@ -40,9 +52,15 @@ body {
 	margin-right: 5px;
 }
 
-/* adjectives */
-.word[data-word-type=JJ] {
-	color: orange;
+/* Conjunction & Postposition */
+.word[data-word-type=CC] {
+	color: #C51162;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.word[data-word-type=PSP] {
+	color: #F50057;
 	font-weight: bold;
 	margin-right: 5px;
 }

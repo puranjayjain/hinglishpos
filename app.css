@@ -40,6 +40,13 @@ body {
 	margin-right: 5px;
 }
 
+/* adjectives */
+.word[data-word-type=JJ] {
+	color: orange;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
 .demo-card-square {
 	margin: 10px auto;
 	width: 95%;

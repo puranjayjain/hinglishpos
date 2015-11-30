@@ -100,15 +100,15 @@ POSTagger.prototype.tag = function(words){
     if (endsWith(words[i], "unga"))
     ret[i] = "VBG";
 
-    // rule 9: convert any type to verb gerund if it ends in "enga";
+    // rule 10: convert any type to verb gerund if it ends in "enga";
     if (endsWith(words[i], "enge"))
     ret[i] = "VBG";
 
-    // rule 9: convert any type to verb gerund if it ends in "ega";
+    // rule 11: convert any type to verb gerund if it ends in "ega";
     if (endsWith(words[i], "ega"))
     ret[i] = "VBG";
 
-    // rule 10: convert any type to verb past if it ends in "gaya";
+    // rule 12: convert any type to verb past if it ends in "gaya";
     if (endsWith(words[i], "gaya"))
     ret[i] = "VBN";
   }
